@@ -1,0 +1,13 @@
+{
+  "name": "chikstagram",
+  "version": "2.1.0",
+  "description": "Chikstagram — TikTok + Telegram в одном приложении. Без внешних зависимостей (Node 22+).",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node --no-warnings server/index.js",
+    "seed": "node --no-warnings server/seed.js",
+    "test": "node --no-warnings server/test.js"
+  },
+  "engines": { "node": ">=22.5" },
+  "license": "MIT"
+}
