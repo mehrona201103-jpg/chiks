@@ -1,0 +1,18 @@
+version = 1
+
+[services.workspace]
+kind = "web"
+template = "node-22"
+start = "node --no-warnings server/index.js"
+public = true
+
+[services.workspace.env]
+CHIK_DATA = "/data"
+
+[services.workspace.sqlite_paths]
+"server/db.js:11:16@a5c17a73b186c8e7fadacae00d8359448210c6fa0e4d357bf820d8b46a786c7d" = "/data/chikstagram.db"
+
+[volumes.chikstagram-data]
+mount_path = "/data"
+service = "workspace"
+size_mb = 2048
